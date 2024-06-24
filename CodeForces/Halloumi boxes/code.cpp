@@ -1,38 +1,39 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
-bool Sorted(vector<int> v){
-    int n = v.size();
-    for(int i = 0;i<n-1;i++){
-        if(v[i+1]<v[i]){
-            return 0;
-        }
-    }
-    return 1;
-}
 int main()
 {
     int t;
-    cin>>t;
-    while(t--){
-        int n , k;
-        cin>>n>>k;
-        vector<int> v(n);
-        for(int i=0;i<n;i++){
-            cin>>v[i];
+    cin >> t;
+    while (t--)
+    {
+        int n, rev;
+        cin >> n >> rev;
+        std::vector<int> arr(n);
+        for (int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
         }
-        if(k>1){
-            cout<<"YES"<<endl;
+        if (rev >= 2)
+        {
+            cout << "YES" << endl;
         }
-        else{
-            if(Sorted(v)){
-                cout<<"YES"<<endl;
+        else
+        {
+            bool isSorted = true;
+            for (int i = 0; i < n - 1; i++)
+            {
+                if (arr[i + 1] < arr[i])
+                {
+                    isSorted = false;
+                    break;
+                }
             }
-            else{
-                cout<<"NO"<<endl;
-            }
+            if (isSorted)
+                cout << "YES" << endl;
+            else
+                cout << "NO" << endl;
         }
-
     }
     return 0;
 }
