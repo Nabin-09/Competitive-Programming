@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "d:\\Nabin\\Data_Structures_and_Algorithms\\Competitve Programming\\CodeForces\\16-Doremy's-point-3",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}
