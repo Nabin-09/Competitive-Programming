@@ -18,23 +18,26 @@ typedef unsigned long long ull;
 typedef long double lld;
 
 void solve(){
-    int n;
-    cin >> n;
-    char k;
-    cin >> k;
-    string str;
-    cin >> str;
-        for(int i = n-1; i >= 0; i--){
-        if(str[i] - '0' > k) {
-            if (i > 0) { 
-                str.insert(i-1, 1, k); 
-            }
+    int n , d;
+    cin >> n >> d;
+    string s ;
+    cin >> s;
+    int flag = -1;
+    for(int i = 0 ; i < n ; i++){
+        if(flag == -1){
+        if(s[i] - '0' < d){flag = 1; cout<< d;} 
         }
+        cout<<s[i];
     }
-    cout<<str<<"\n";
+    if(flag == -1){
+        cout<<d<<"\n";
+    }
+    else{
+        cout<<"\n";
+    }
 }
 
-int main()
+int main() 
 {
     #ifndef ONLINE_JUDGE
     freopen("input.txt" , "r" , stdin);
